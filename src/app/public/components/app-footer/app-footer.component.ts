@@ -12,6 +12,7 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [CommonModule, TranslateModule],
   templateUrl: './app-footer.component.html',
   styleUrl: './app-footer.component.css',
+  styleUrl: './app-footer.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppFooterComponent {}

@@ -1,0 +1,13 @@
+:host {
+  display: inline-flex;
+}
+
+mat-button-toggle-group {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+}
+
+mat-button-toggle {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}

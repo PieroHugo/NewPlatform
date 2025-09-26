@@ -15,6 +15,7 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [CommonModule, MatCardModule, MatButtonModule, DatePipe, TranslateModule],
   templateUrl: './exhibition-card.component.html',
   styleUrl: './exhibition-card.component.css',
+  styleUrl: './exhibition-card.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExhibitionCardComponent {

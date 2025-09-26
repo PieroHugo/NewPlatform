@@ -19,6 +19,7 @@ import { ExhibitionCardComponent } from '../exhibition-card/exhibition-card.comp
   imports: [CommonModule, TranslateModule, MatProgressSpinnerModule, ExhibitionCardComponent],
   templateUrl: './exhibitions-information.component.html',
   styleUrl: './exhibitions-information.component.css',
+  styleUrl: './exhibitions-information.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExhibitionsInformationComponent implements OnInit {
