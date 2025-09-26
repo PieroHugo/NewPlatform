@@ -1,0 +1,9 @@
+<mat-button-toggle-group
+  aria-label="Select application language"
+  [value]="currentLang()"
+  (change)="switchLanguage($event)"
+  appearance="standard"
+>
+  <mat-button-toggle value="en" aria-label="Switch to English">EN</mat-button-toggle>
+  <mat-button-toggle value="es" aria-label="Switch to Spanish">ES</mat-button-toggle>
+</mat-button-toggle-group>

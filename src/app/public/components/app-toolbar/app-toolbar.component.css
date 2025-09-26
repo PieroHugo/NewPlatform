@@ -1,0 +1,45 @@
+:host {
+  display: block;
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1.5rem;
+}
+
+.toolbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.toolbar__logo {
+  width: 40px;
+  height: 40px;
+}
+
+.toolbar__actions {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 599px) {
+  mat-toolbar {
+    padding-inline: 1rem;
+  }
+
+  .toolbar__title {
+    font-size: 1rem;
+  }
+
+  .toolbar__logo {
+    width: 32px;
+    height: 32px;
+  }
+}
