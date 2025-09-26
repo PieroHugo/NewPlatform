@@ -1,8 +1,9 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import {provideTranslateService, provideTranslateLoader } from "@ngx-translate/core";
-import {provideTranslateHttpLoader} from "@ngx-translate/http-loader";
-import {provideHttpClient} from "@angular/common/http";
+import { provideTranslateService } from '@ngx-translate/core';
+import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
+import { provideHttpClient } from '@angular/common/http';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 import { routes } from './app.routes';
 
@@ -11,10 +12,11 @@ export const appConfig: ApplicationConfig = {
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
+    provideAnimations(),
     provideHttpClient(),
     provideTranslateService({
       loader: provideTranslateHttpLoader({
-        prefix: './i18n/',
+        prefix: './assets/i18n/',
         suffix: '.json'
       }),
       fallbackLang: 'en',

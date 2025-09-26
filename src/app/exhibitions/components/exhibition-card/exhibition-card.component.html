@@ -1,0 +1,60 @@
+<mat-card class="exhibition-card" role="article" [attr.aria-labelledby]="'exhibition-' + exhibition.id">
+  <mat-card-header>
+    <mat-card-title id="{{ 'exhibition-' + exhibition.id }}">{{ exhibition.title }}</mat-card-title>
+  </mat-card-header>
+  <ng-container *ngIf="exhibition.imageUrl as imageUrl">
+    <img
+      mat-card-image
+      [src]="imageUrl"
+      [alt]="exhibition.title"
+      loading="lazy"
+    />
+  </ng-container>
+  <mat-card-content>
+    <p class="exhibition-card__description" *ngIf="exhibition.shortDescription; else noDescription">
+      {{ exhibition.shortDescription }}
+    </p>
+    <ng-template #noDescription>
+      <p class="exhibition-card__description exhibition-card__description--muted">
+        {{ 'exhibitions.noDescription' | translate }}
+      </p>
+    </ng-template>
+
+    <dl class="exhibition-card__details">
+      <div>
+        <dt>{{ 'exhibitions.statusLabel' | translate }}</dt>
+        <dd>{{ exhibition.status || ('exhibitions.notAvailable' | translate) }}</dd>
+      </div>
+      <div>
+        <dt>{{ 'exhibitions.galleryLabel' | translate }}</dt>
+        <dd>{{ exhibition.galleryTitle || ('exhibitions.notAvailable' | translate) }}</dd>
+      </div>
+    </dl>
+  </mat-card-content>
+  <mat-card-actions align="end" class="exhibition-card__actions">
+    <a
+      mat-button
+      color="primary"
+      [href]="exhibition.webUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="{{ 'exhibitions.openExternal' | translate:{ title: exhibition.title } }}"
+    >
+      {{ 'exhibitions.viewDetails' | translate }}
+    </a>
+    <span class="exhibition-card__date" *ngIf="hasDateRange; else noDate">
+      <ng-container *ngIf="exhibition.startDate as start; else startTba">{{ start | date: 'longDate' }}</ng-container>
+      <span aria-hidden="true">&nbsp;–&nbsp;</span>
+      <ng-container *ngIf="exhibition.endDate as end; else endTba">{{ end | date: 'longDate' }}</ng-container>
+    </span>
+    <ng-template #startTba>
+      <span>{{ 'exhibitions.toBeAnnounced' | translate }}</span>
+    </ng-template>
+    <ng-template #endTba>
+      <span>{{ 'exhibitions.toBeAnnounced' | translate }}</span>
+    </ng-template>
+  </mat-card-actions>
+  <ng-template #noDate>
+    <span class="exhibition-card__date">{{ 'exhibitions.noDates' | translate }}</span>
+  </ng-template>
+</mat-card>
