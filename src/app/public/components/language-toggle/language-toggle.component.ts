@@ -13,6 +13,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   standalone: true,
   imports: [CommonModule, MatButtonToggleModule],
   templateUrl: './language-toggle.component.html',
+  styleUrl: './language-toggle.component.css',
   styleUrl: './language-toggle.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

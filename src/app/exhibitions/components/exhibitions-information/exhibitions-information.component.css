@@ -1,0 +1,39 @@
+:host {
+  display: block;
+}
+
+.exhibitions__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.exhibitions__subtitle {
+  color: rgba(15, 23, 42, 0.7);
+  margin: 0.5rem 0 0;
+}
+
+.exhibitions__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.exhibitions__error {
+  color: #b91c1c;
+  font-weight: 600;
+  text-align: center;
+}
+
+.exhibitions__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.exhibitions__empty {
+  text-align: center;
+  padding: 2rem 0;
+  color: rgba(15, 23, 42, 0.7);
+}

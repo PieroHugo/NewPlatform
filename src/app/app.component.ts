@@ -14,6 +14,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
   standalone: true,
   imports: [AppToolbarComponent, ExhibitionsInformationComponent, AppFooterComponent],
   templateUrl: './app.component.html',
+  styleUrl: './app.component.css',
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

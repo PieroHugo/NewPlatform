@@ -13,6 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, MatToolbarModule, LanguageToggleComponent, TranslateModule],
   templateUrl: './app-toolbar.component.html',
+  styleUrl: './app-toolbar.component.css',
   styleUrl: './app-toolbar.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
