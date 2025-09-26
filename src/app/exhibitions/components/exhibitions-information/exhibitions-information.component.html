@@ -1,0 +1,26 @@
+<section class="exhibitions" aria-labelledby="exhibitions-title">
+  <header class="exhibitions__header">
+    <h1 id="exhibitions-title">{{ 'exhibitions.viewTitle' | translate }}</h1>
+    <p class="exhibitions__subtitle">{{ 'exhibitions.subtitle' | translate }}</p>
+  </header>
+
+  <div class="exhibitions__loading" *ngIf="isLoading(); else content" role="status" aria-live="polite">
+    <mat-progress-spinner mode="indeterminate" diameter="48"></mat-progress-spinner>
+    <span>{{ 'exhibitions.loading' | translate }}</span>
+  </div>
+
+  <ng-template #content>
+    <p class="exhibitions__error" *ngIf="errorMessage() as errorKey">{{ errorKey | translate }}</p>
+    <div class="exhibitions__grid" role="list" *ngIf="hasExhibitions(); else emptyState">
+      <app-exhibition-card
+        role="listitem"
+        *ngFor="let exhibition of exhibitions()"
+        [exhibition]="exhibition"
+      ></app-exhibition-card>
+    </div>
+  </ng-template>
+
+  <ng-template #emptyState>
+    <p class="exhibitions__empty">{{ 'exhibitions.empty' | translate }}</p>
+  </ng-template>
+</section>

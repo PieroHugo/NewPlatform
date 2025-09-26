@@ -1,0 +1,6 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Art Institute of Chicago monogram</title>
+  <desc id="desc">Stylized block letters AIC</desc>
+  <rect width="120" height="120" fill="#0f1c2d" rx="12" />
+  <path d="M30 90L55 30h10l25 60h-12l-5-12H47l-5 12H30zm22-24h20l-10-24-10 24zm52-36h-12V30h12v12zm0 48h-12V54h12v24z" fill="#f5f7fa" />
+</svg>

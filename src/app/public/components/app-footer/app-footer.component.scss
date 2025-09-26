@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  background-color: #0f1c2d;
+  color: #f1f5f9;
+}
+
+.app-footer {
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  max-width: 1200px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+.app-footer p + p {
+  margin-top: 0.5rem;
+}
+
+.app-footer__author {
+  font-weight: 600;
+}

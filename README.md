@@ -1,84 +1,43 @@
-# CatchUp (catch-up)
+# pc156789u20231234
 
 ## Overview
-This project is a news application that allows users to catch up on the latest news.
+pc156789u20231234 is an Angular web application crafted for the Art Institute of Chicago to showcase public information about art exhibitions retrieved from the museum's official REST API. The experience highlights accessibility, internationalization, and a clean Material Design interface tailored for developers and art enthusiasts alike.
 
 ## Features
-- Fetch News Sources.
-- Fetch News Articles for the selected source.
-- View Articles in a list.
-- It shows for each article information like title, description, image.
-- It allows users to share the article.
+- Material Design toolbar with institutional branding and an English/Spanish language toggle powered by `@ngx-translate`.
+- Exhibitions information view that consumes the Art Institute of Chicago exhibitions endpoint and presents each record inside responsive cards with imagery, metadata, and long date ranges.
+- Domain-driven structure with clear separation between public layout components and exhibitions-specific models, services, and presentation layers.
+- Request/Response, Resource, and Assembler patterns implemented to keep API interactions decoupled from UI concerns.
+- Accessibility enhancements including ARIA roles, descriptive alternative text, and live region announcements for loading states.
 
-## Technologies
-- Angular framework.
-- Typescript language.
-- Angular Material UI Component Library.
-- Angular HTTP client.
-- Angular Signals.
-- Angular reactive state management.
-- NGX-Translate library.
-- NewsAPI.org service client.
-- Clearbit Logo service client.
+## Architecture
+The source code follows a layered, component-based organization with the following sub-domains:
+- `public`: Shared layout elements such as the toolbar, language toggle, and footer.
+- `exhibitions`: Domain objects, services, and presentation components dedicated to exhibitions information.
 
-## User Stories
-The user stories can be found in the [./docs/user-stories.md](docs/user-stories.md) file.
+Key technologies include Angular 17 standalone components, Angular Material, Angular Signals for lightweight state management, and the HttpClient module for API integration.
 
-## Class Diagram
-The class diagram can be found in the [./docs/class-diagram.png](docs/class-diagram.png) file.
-
-## Development server
-
-To start a local development server, run:
+## Getting Started
+Install dependencies and launch the development server with:
 
 ```bash
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Navigate to `http://localhost:4200/` to explore the application. The UI loads English text by default and allows switching to Spanish at any time.
 
-## Code scaffolding
+## Internationalization
+Translations reside under `public/assets/i18n/` and are dynamically loaded through `@ngx-translate/http-loader`. Add new languages by extending this directory and updating the translation keys.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Testing
+Execute unit tests with:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+## Author
+- Developer: Carlos Perez (u20231234)
+- NRC: 56789
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

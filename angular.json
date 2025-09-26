@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "catch-up": {
+    "pc156789u20231234": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -57,10 +57,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "catch-up:build:production"
+              "buildTarget": "pc156789u20231234:build:production"
             },
             "development": {
-              "buildTarget": "catch-up:build:development"
+              "buildTarget": "pc156789u20231234:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,5 +89,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

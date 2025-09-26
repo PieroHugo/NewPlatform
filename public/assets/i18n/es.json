@@ -1,0 +1,24 @@
+{
+  "toolbar": {
+    "title": "Exposiciones del Art Institute of Chicago"
+  },
+  "exhibitions": {
+    "viewTitle": "Información de todas las exposiciones",
+    "subtitle": "Descubra las exposiciones actuales y futuras curadas por el Art Institute of Chicago.",
+    "loading": "Cargando exposiciones...",
+    "errorMessage": "No pudimos cargar las exposiciones en este momento. Intente nuevamente más tarde.",
+    "empty": "No hay exposiciones disponibles por el momento.",
+    "statusLabel": "Estado",
+    "galleryLabel": "Galería",
+    "viewDetails": "Ver detalles",
+    "openExternal": "Abrir detalles de la exposición {{ title }} en una nueva pestaña",
+    "toBeAnnounced": "Por anunciar",
+    "noDates": "Información de fechas no disponible",
+    "notAvailable": "No disponible",
+    "noDescription": "No se ha proporcionado una descripción para esta exposición."
+  },
+  "footer": {
+    "copyright": "Derechos reservados © 2025 Art Institute of Chicago.",
+    "developedBy": "Desarrollado por"
+  }
+}
